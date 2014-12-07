@@ -1,0 +1,25 @@
+<div class = "campo">
+<div class ="titulo">
+<h2>Login</h2>
+</div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="login">
+	<div class="usuario">
+		<%= f.label "Usuário" %>
+		<%= f.text_field :login, autofocus: true %>
+	</div>
+	<br>
+	<div>
+		<%= f.label "Senha" %>
+		<%= f.password_field :password, autocomplete: "off" %>
+	</div>
+<div>
+<br/>
+<div class="form-actions">
+	<%= f.submit "Logar", class: 'btn btn-primary' %>
+        <%= link_to "Cadastrar", new_user_registration_path,class: 'btn btn-primary'%>
+</div>
+
+<br/>
+</div>
+<% end %>

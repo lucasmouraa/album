@@ -1,0 +1,15 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<table class="table table-condensed">
+  
+  <tbody>
+<% @users.each do |user| %>
+    
+       <td><%= link_to user.nome, user_path(user) %></td>
+       <td><%= image_tag  user.avatar(:thumb) %></td>
+
+    
+<% end %>
+  </tbody>
+</table>
