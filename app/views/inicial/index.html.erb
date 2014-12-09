@@ -1,0 +1,18 @@
+<CENTER>
+<h1>FotoProfile </h1>
+<p>Este é um Yearbook brasileiro cadastre-se e venha fazer parte do nosso mural de fotos.</p>
+</CENTER>
+
+
+<table class="table table-condensed">
+  <tbody>
+ 
+<% @users.take(3).each do |user| %>
+      
+       <td><%= link_to user.nome, user_path(user) %></td>
+       <td><%= image_tag  user.avatar(:thumb) %></td>
+
+    
+<% end %>
+  </tbody>
+</table>
